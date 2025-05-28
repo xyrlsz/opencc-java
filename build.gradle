@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.xyrlsz'
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+
+    maven {
+        url = "https://mirrors.huaweicloud.com/repository/maven/"
+    }
+    maven {
+        url = "https://developer.huawei.com/repo/"
+    }
+}
+
+dependencies {
+    implementation 'com.google.code.gson:gson:2.10'
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
